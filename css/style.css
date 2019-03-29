@@ -3,9 +3,37 @@
   padding: 0px;
  }
 
-p {
-	padding: 15px 10px;
-	position: relative;
+fieldset {
+	border-color: lightgrey;
+    border-right: 1px solid transparent;
+    border-left: 1px solid transparent;
+    margin: 20px 12px;
+    text-align: center;
+    font-size: 1.5em;
+}
+
+legend {
+	color: grey;
+    font-size: 0.8em;
+}
+
+h1 {
+	text-align: center;
+	font-size: 1.5em;
+	padding: 30px 0px 0px;
+}
+
+input {
+	height: 30px;
+	width: 120px;
+    padding: 5px 15px;  
+    font-weight: bold;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    background-image: linear-gradient(to bottom, #03db00, #00c123);
+    box-shadow: 0px 0px 0px 0.5px rgba(0, 0, 0, 0.3);
+    text-shadow:0 1px 1px white;
 }
 
 .mainBlock {
@@ -20,7 +48,7 @@ p {
 	margin-top: 2vh;
 }
 
-.bodyBack {
+.bodyBackground {
 	height: 700px;
 	background: #dbdbdb;
 	margin: auto;
@@ -31,13 +59,19 @@ p {
 	bottom: 0;
 }
 
+.bodyBlock {
+	display: flex;
+	width: 70%;
+	margin: auto;
+	position: absolute;
+	left: 0;
+	right: 0;
+	top: 0;
+	bottom: 0;
+}
+
 .price {
-	position: relative;
-	border-top: 1px solid grey;
-	border-bottom: 1px solid grey;
-	margin: 24px 12px;
-    text-align: center;
-    font-size: 1.5em;
+	margin-bottom: 10px;
     font-weight: bold;
 }
 
@@ -52,82 +86,27 @@ p {
 	margin: auto;
 }
 
-.optimalHeader p {
-	padding: 27.5px 10px;
-}
-
-/* ---------------------------- */
-
-.bodyBlock {
-	display: flex;
-	width: 70%;
-	margin: auto;
-	position: absolute;
-	left: 0;
-	right: 0;
-	top: 0;
-	bottom: 0;
-}
-
-/* ---------------------------- */
-
-.basicBlock {
-	height: 600px;
-	width: 25%;
-	background: white;
-	margin: auto;
-}
-
-.basicHeader {
-	height: 70px;
-	width: 25%;
-	background: #49b0ff;
-	color: white;
-	font-size: 2em;
+.orderButton {
+	margin-top: 50px;
 	text-align: center;
-	position: absolute;
-
-}
-
-.basicTriangle {
-	width: 0; 
-	height: 0;
-	border-left: 16px solid transparent;
-	border-right: 16px solid transparent;
-	border-top: 16px solid #49b0ff;
-	margin: auto;
-}
-
-.basicInfoText {
-	margin-top: 85px;
-	margin-left: 2px;
-	margin-right: 2px;
-	padding: 10px;
-	overflow: auto;
-    height: 200px;
 }
 
 /* ---------------------------- */
 
-.optimalBlock {
-	height: 650px;
-	width: 25%;
-	background: white;
-	margin: auto;
+.optimalBlock .orderButton {
+	margin-top: 70px;
+	text-align: center;
 }
 
-.optimalHeader {
+.optimalBlock .blockHeader {
 	height: 95px;
-	width: 25%;
 	background: orange;
 	color: white;
 	font-size: 2em;
 	text-align: center;
-	position: absolute;
-
 }
 
-.optimalTriangle {
+.optimalBlock .blockTriangle {
 	width: 0; 
 	height: 0;
 	border-left: 16px solid transparent;
@@ -136,38 +115,78 @@ p {
 	margin: auto;
 }
 
-.optimalInfoText {
-	margin-top: 110px;
-	margin-left: 2px;
-	margin-right: 2px;
-	padding: 10px;
-	overflow: auto;
-    height: 200px;
+.optimalBlock .blockHeader p {
+	padding: 27.5px 10px;
 }
 
+.optimalBlock .blockLowerUpper {
+	background: orange;
+}
 
+.optimalBlock .blockLowerUpper:after {
+	border-top: 10px solid orange;
+}
+
+.optimalBlock h1 {
+	padding: 23px 0px 0px;
+}
+
+.premiumBlock h1 {
+	padding: 23px 0px 0px;
+}
+
+.authorStar p {
+	position: absolute;
+	padding: 0px 0px 0px 30px;
+    text-align: center;
+}
+
+.authorStar img {
+	position: absolute;
+	padding: 2px 0px 0px 13px;
+}
 
 /* ---------------------------- */
 
-.premiumBlock {
+.basicBlock {
 	height: 600px;
-	width: 25%;
+	width: 300px;
 	background: white;
 	margin: auto;
+	box-shadow: 0 0 10px rgba(0,0,0,0.2);
 }
 
-.premiumHeader {
+.optimalBlock {
+	height: 650px;
+	width: 300px;
+	background: white;
+	margin: auto;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.premiumBlock {
+	height: 600px;
+	width: 300px;
+	background: white;
+	margin: auto;
+	box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+/* ---------------------------- */
+
+.blockHeader {
 	height: 70px;
-	width: 25%;
 	background: #49b0ff;
 	color: white;
 	font-size: 2em;
 	text-align: center;
-	position: absolute;
-
 }
 
-.premiumTriangle {
+.blockHeader p {
+	padding: 15px 10px;
+}
+
+.blockTriangle {
 	width: 0; 
 	height: 0;
 	border-left: 16px solid transparent;
@@ -176,11 +195,65 @@ p {
 	margin: auto;
 }
 
-.premiumInfoText {
-	margin-top: 85px;
+.blockInfoText {
+	margin-top: 10px;
 	margin-left: 2px;
 	margin-right: 2px;
 	padding: 10px;
 	overflow: auto;
-    height: 200px;
+    height: 180px;
+}
+
+.blockLowerUpper {
+	height: 20px; 
+	width: 40px;
+	background: #49b0ff;
+	margin: auto;
+	margin-top: 20px;
+	position: relative;
+	z-index: 1;
+}
+
+.blockLowerUpper p{
+	padding: 2px;
+	text-align: center;
+	color: white;
+	font-weight: bold;
+}
+ 
+.blockLowerUpper:after {
+	content: "";
+	height: 0; 
+	width: 0;
+	position: absolute;
+	margin-top: auto;
+	top: 20px;
+	border-left: 20px solid transparent;
+	border-right: 20px solid transparent;
+	border-top: 10px solid #49b0ff;
+}
+
+.blockLower {
+	height: 100px; 
+	width: 240px;
+	background: lightgrey;
+	margin: auto;
+	margin-top: -10px;
+	position: relative;
+}
+ 
+.blockLower:after {
+	content: "";
+	height: 0; 
+	width: 0;
+	position: absolute; 
+	top: 100px;
+	border-left: 120px solid transparent;
+	border-right: 120px solid transparent;
+	border-top: 40px solid lightgrey;
+}
+
+.blockLower p {
+	text-align: center;
+	padding:  5px 10px;
 }
